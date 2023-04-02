@@ -1,262 +1,475 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.0-web/css/fontawesome.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontawesome-free-6.4.0-web/css/fontawesome.min.css"
+    />
+  </head>
+  <body>
     <div class="app">
-        <!-- Header -->
-        <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
-                    <ul class="header__navbar-list">
-                        <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
-                            Vào cửa hàng trên ứng dụng
-                            <!-- Header QR Code -->
-                            <div class="header__qr">
-                                <img src="./assets/img/qr_code.png" alt="QR code" class="header__qr-img">
-                                <div class="header_qr-app">
-                                    <a href="" class="header__qr-link">
-                                    <img src="./assets/img/google_play.png" alt="Google Play" class="header_qr-download-img">
-                                    </a>
-                                    <a href="" class="header__qr-link">
-                                    <img src="./assets/img/app_store.png" alt="App Store" class="header_qr-download-img">
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="header__navbar-item">
-                            <span class="header__navbar-title--no-pointer">Kết nối</span>
-                            <a href="" class="header__navbar-icon-link">
-                                <i class="header__navbar-icon fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="" class="header__navbar-icon-link">
-                                <i class="header__navbar-icon fa-brands fa-instagram"></i>
-                            </a>
-                        </li>
+      <!-- Header -->
+      <header class="header">
+        <div class="grid">
+          <nav class="header__navbar">
+            <ul class="header__navbar-list">
+              <li
+                class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate"
+              >
+                Vào cửa hàng trên ứng dụng
+                <!-- Header QR Code -->
+                <div class="header__qr">
+                  <img
+                    src="./assets/img/qr_code.png"
+                    alt="QR code"
+                    class="header__qr-img"
+                  />
+                  <div class="header_qr-app">
+                    <a href="" class="header__qr-link">
+                      <img
+                        src="./assets/img/google_play.png"
+                        alt="Google Play"
+                        class="header_qr-download-img"
+                      />
+                    </a>
+                    <a href="" class="header__qr-link">
+                      <img
+                        src="./assets/img/app_store.png"
+                        alt="App Store"
+                        class="header_qr-download-img"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="header__navbar-item">
+                <span class="header__navbar-title--no-pointer">Kết nối</span>
+                <a href="" class="header__navbar-icon-link">
+                  <i class="header__navbar-icon fa-brands fa-facebook"></i>
+                </a>
+                <a href="" class="header__navbar-icon-link">
+                  <i class="header__navbar-icon fa-brands fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="header__navbar-list">
+              <li
+                class="header__navbar-item header__navbar-item--has-notification"
+              >
+                <a href="" class="header__navbar-item-link">
+                  <i
+                    class="header__navbar-icon fa-sharp fa-regular fa-bell"
+                  ></i>
+                  Thông báo
+                </a>
+
+                <div class="header__notification">
+                  <header class="header__notification-header">
+                    <h3>Thông báo mới nhận</h3>
+                  </header>
+                  <ul class="header__notification-list">
+                    <li
+                      class="header__notification-item header__notification-item--viewed"
+                    >
+                      <a href="" class="header__notification-link">
+                        <img
+                          src="./assets/img/flowers/white-tulip.jpg"
+                          alt=""
+                          class="header__notification-img"
+                        />
+                        <div class="header__notification-info">
+                          <span class="header__notification-name"
+                            >Tulip trắng</span
+                          >
+                          <span class="header__notification-description"
+                            >Vẻ đẹp nhẹ nhàng, đằm thắm, mộc mạc đại diện cho sự
+                            tinh khiết, danh dự và thánh thiện</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="header__notification-item">
+                      <a href="" class="header__notification-link">
+                        <img
+                          src="./assets/img/flowers/orange-tulip.jpg"
+                          alt=""
+                          class="header__notification-img"
+                        />
+                        <div class="header__notification-info">
+                          <span class="header__notification-name"
+                            >Tulip cam</span
+                          >
+                          <span class="header__notification-description"
+                            >Sức sống mãnh liệt, nguồn sinh lực dồi dào và một
+                            năng lượng tươi mới, tích cực</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                    <li class="header__notification-item">
+                      <a href="" class="header__notification-link">
+                        <img
+                          src="./assets/img/flowers/pink-tulip.jpg"
+                          alt=""
+                          class="header__notification-img"
+                        />
+                        <div class="header__notification-info">
+                          <span class="header__notification-name"
+                            >Tulip hồng</span
+                          >
+                          <span class="header__notification-description"
+                            >Tượng trưng cho tình yêu chân thành, hoa sẽ là một
+                            món quà tuyệt vời để bạn dành tặng cho người mà mình
+                            yêu thương</span
+                          >
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <footer class="header__notification-footer">
+                    <a href="" class="header__notification-footer-btn"
+                      >Xem tất cả</a
+                    >
+                  </footer>
+                </div>
+              </li>
+              <li class="header__navbar-item">
+                <a href="" class="header__navbar-item-link">
+                  <i
+                    class="header__navbar-icon fa-sharp fa-regular fa-circle-question"
+                  ></i>
+                  Trợ giúp</a
+                >
+              </li>
+              <!-- <li class="header__navbar-item header__navbar-item--bold header__navbar-item--separate">Đăng kí</li> -->
+              <!-- <li class="header__navbar-item header__navbar-item--bold">Đăng nhập</li> -->
+              <li class="header__navbar-item header__navbar-user">
+                <img
+                  src="./assets/img/avatar-user.png"
+                  alt=""
+                  class="header__navbar-user-img"
+                />
+                <span class="header__navbar-user-name">Huỳnh Duy</span>
+
+                <ul class="header__navbar-user-menu">
+                  <li class="header__navbar-user-item">
+                    <a href="" class="">Tài khoản của tôi</a>
+                  </li>
+                  <li class="header__navbar-user-item">
+                    <a href="" class="">Đơn mua</a>
+                  </li>
+                  <li
+                    class="header__navbar-user-item header__navbar-user-item--separate"
+                  >
+                    <a href="" class="">Đăng xuất</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header-with-search">
+            <div class="header__logo">
+              <a href="/" class="header__logo-link">
+                <img
+                  src="./assets/img/tulip-logo.jpg"
+                  alt="Tulip logo"
+                  class="header__logo-img"
+                />
+              </a>
+            </div>
+
+            <div class="header__search">
+              <div class="header__search-input-wrap">
+                <input
+                  type="text"
+                  class="header__search-input"
+                  placeholder="Nhập để tìm kiếm ... "
+                />
+                <div class="header__search-history">
+                  <h3 class="header__search-history-heading">
+                    Lịch sử tìm kiếm
+                  </h3>
+                  <ul class="header__search-history-list">
+                    <li class="header__search-history-item">
+                      <a href="">Tulip trắng</a>
+                    </li>
+                    <li class="header__search-history-item">
+                      <a href="">Tulip hồng</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header__search-selection">
+                <span class="header__search-selection-label"> Trong shop </span>
+                <i
+                  class="header__search-selection-icon fa-solid fa-angle-down"
+                ></i>
+
+                <ul class="header__search-option">
+                  <li
+                    class="header__search-option-item header__search-option-item--active"
+                  >
+                    <span> Trong shop </span>
+                    <i class="fas fa-check"></i>
+                  </li>
+                  <li class="header__search-option-item">
+                    <span> Ngoài shop </span>
+                    <i class="fas fa-check"></i>
+                  </li>
+                </ul>
+              </div>
+              <button class="header__search-btn">
+                <i class="header__search-btn-icon fas fa-search"></i>
+              </button>
+            </div>
+
+            <div class="header__cart">
+              <div class="header__cart-wrap">
+                <i class="fa-solid fa-cart-arrow-down header__cart-icon"></i>
+                <span class="header__cart-notice">3</span>
+                <!-- No cart: header__cart-list--no-cart -->
+                <div class="header__cart-list">
+                  <img
+                    src="./assets/img/no-cart.jpg"
+                    alt=""
+                    class="header__cart-no-cart-img"
+                  />
+                  <span class="header__cart-list-no-cart-msg">
+                    Chưa có sản phẩm
+                  </span>
+
+                  <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                  <ul class="header__cart-list-item">
+                    <li class="header__cart-item">
+                      <img
+                        src="./assets/img/flowers/white-tulip.jpg"
+                        alt=""
+                        class="header__cart-item-img"
+                      />
+                      <div class="header__cart-item-info">
+                        <div class="header__cart-item-head">
+                          <h5 class="header__cart-item-name">Tulip trắng</h5>
+                          <div class="header__cart-item-wrap">
+                            <span class="header__cart-item-price"
+                              >170.000 đ</span
+                            >
+                            <span class="header__cart-item-mutiply">x</span>
+                            <span class="header__cart-item-quantity">4</span>
+                          </div>
+                        </div>
+                        <div class="header__cart-item-body">
+                          <span class="header__cart-item-description"
+                            >Phân loại: Cao</span
+                          >
+                          <span class="header__cart-item-remove">Xoá</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="header__cart-item">
+                      <img
+                        src="./assets/img/flowers/pink-tulip.jpg"
+                        alt=""
+                        class="header__cart-item-img"
+                      />
+                      <div class="header__cart-item-info">
+                        <div class="header__cart-item-head">
+                          <h5 class="header__cart-item-name">Tulip hồng</h5>
+                          <div class="header__cart-item-wrap">
+                            <span class="header__cart-item-price"
+                              >145.000 đ</span
+                            >
+                            <span class="header__cart-item-mutiply">x</span>
+                            <span class="header__cart-item-quantity">8</span>
+                          </div>
+                        </div>
+                        <div class="header__cart-item-body">
+                          <span class="header__cart-item-description"
+                            >Phân loại: Vừa</span
+                          >
+                          <span class="header__cart-item-remove">Xoá</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="header__cart-item">
+                      <img
+                        src="./assets/img/flowers/orange-tulip.jpg"
+                        alt=""
+                        class="header__cart-item-img"
+                      />
+                      <div class="header__cart-item-info">
+                        <div class="header__cart-item-head">
+                          <h5 class="header__cart-item-name">Tulip cam</h5>
+                          <div class="header__cart-item-wrap">
+                            <span class="header__cart-item-price"
+                              >155.000 đ</span
+                            >
+                            <span class="header__cart-item-mutiply">x</span>
+                            <span class="header__cart-item-quantity">7</span>
+                          </div>
+                        </div>
+                        <div class="header__cart-item-body">
+                          <span class="header__cart-item-description"
+                            >Phân loại: Vừa</span
+                          >
+                          <span class="header__cart-item-remove">Xoá</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <a href="#" class="header__cart-view-cart btn btn--primary">
+                    Xem giỏ hàng
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Body -->
+      <div class="app__container">
+        <div class="grid">
+            <div class="grid__row app__content">
+                <div class="grid__column-2">
+                  <nav class="category">
+                    <h3 class="category__heading">
+                        <i class="category__heading-icon fas fa-list"></i>
+                        Danh mục
+                    </h3>
+      
+                    <ul class="category-list">
+                      <li class="category-item category-item--active">
+                        <a href="#" class="cotegory-item__link"> Hoa màu trắng </a>
+                      </li>
+                      <li class="category-item">
+                        <a href="#" class="cotegory-item__link"> Hoa màu hồng </a>
+                      </li>
+                      <li class="category-item">
+                        <a href="#" class="cotegory-item__link"> Hoa màu cam </a>
+                      </li>
                     </ul>
-    
-                    <ul class="header__navbar-list">
-                        <li class="header__navbar-item header__navbar-item--has-notification">
-                            <a href="" class="header__navbar-item-link">
-                                <i class="header__navbar-icon fa-sharp fa-regular fa-bell"></i>
-                                Thông báo
-                            </a>
-
-                            <div class="header__notification">
-                                <header class="header__notification-header">
-                                    <h3>Thông báo mới nhận</h3>
-                                </header>
-                                <ul class="header__notification-list">
-                                    <li class="header__notification-item header__notification-item--viewed">
-                                        <a href="" class="header__notification-link">
-                                            <img src="./assets/img/flowers/white-tulip.jpg" alt="" class="header__notification-img">
-                                            <div class="header__notification-info">
-                                                <span class="header__notification-name">Tulip trắng</span>
-                                                <span class="header__notification-description">Vẻ đẹp nhẹ nhàng, đằm thắm, mộc mạc đại diện cho sự tinh khiết, danh dự và thánh thiện</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notification-item">
-                                        <a href="" class="header__notification-link">
-                                            <img src="./assets/img/flowers/orange-tulip.jpg" alt="" class="header__notification-img">
-                                            <div class="header__notification-info">
-                                                <span class="header__notification-name">Tulip cam</span>
-                                                <span class="header__notification-description">Sức sống mãnh liệt, nguồn sinh lực dồi dào và một năng lượng tươi mới, tích cực</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="header__notification-item">
-                                        <a href="" class="header__notification-link">
-                                            <img src="./assets/img/flowers/pink-tulip.jpg" alt="" class="header__notification-img">
-                                            <div class="header__notification-info">
-                                                <span class="header__notification-name">Tulip hồng</span>
-                                                <span class="header__notification-description">Tượng trưng cho tình yêu chân thành, hoa sẽ là một món quà tuyệt vời để bạn dành tặng cho người mà mình yêu thương</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <footer class="header__notification-footer">
-                                    <a href="" class="header__notification-footer-btn">Xem tất cả</a>
-                                </footer>
-                            </div>
-                        </li>
-                        <li class="header__navbar-item">
-                            <a href="" class="header__navbar-item-link">
-                                <i class="header__navbar-icon fa-sharp fa-regular fa-circle-question"></i>
-                                Trợ giúp</a>
-                        </li>
-                        <!-- <li class="header__navbar-item header__navbar-item--bold header__navbar-item--separate">Đăng kí</li> -->
-                        <!-- <li class="header__navbar-item header__navbar-item--bold">Đăng nhập</li> -->
-                        <li class="header__navbar-item header__navbar-user">
-                            <img src="./assets/img/avatar-user.png" alt="" class="header__navbar-user-img">
-                            <span class="header__navbar-user-name">Huỳnh Duy</span>
-
-                            <ul class="header__navbar-user-menu">
-                                <li class="header__navbar-user-item">
-                                    <a href="" class="">Tài khoản của tôi</a>
+                  </nav>
+                </div>
+      
+                <div class="grid__column-10">
+                    <!-- Header (filter) -->
+                    <div class="home-filter">
+                        <span class="home-filter__label">Sắp xếp theo</span>
+                        <button class="home-filter__btn btn">Phổ biến</button>
+                        <button class="home-filter__btn btn btn--primary">Mới nhất</button>
+                        <button class="home-filter__btn btn">Bán chạy</button>
+                        <!-- List option -->
+                        <div class="select-filter">
+                            <span class="select-filter__label">Giá</span>
+                            <i class="select-filter__icon fas fa-angle-down"></i>
+                            <ul class="select-filter__list">
+                                <li class="select-filter__item">
+                                    <a href="" class="select-filter__link">Thấp đến cao</a>
                                 </li>
-                                <li class="header__navbar-user-item">
-                                    <a href="" class="">Đơn mua</a>
-                                </li>
-                                <li class="header__navbar-user-item header__navbar-user-item--separate">
-                                    <a href="" class="">Đăng xuất</a>
+                                <li class="select-filter__item">
+                                    <a href="" class="select-filter__link">Cao đến thấp</a>
                                 </li>
                             </ul>
-                        </li>
-
-                    </ul>
-                </nav>
-
-                <div class="header-with-search">
-                    <div class="header__logo">
-                        <a href="/" class="header__logo-link">
-                            <img src="./assets/img/tulip-logo.jpg" alt="Tulip logo" class="header__logo-img">
-                        </a>
-                    </div>
-
-                    <div class="header__search">
-                        <div class="header__search-input-wrap">
-                            <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm ... ">
-                            <div class="header__search-history ">
-                                <h3 class="header__search-history-heading">
-                                    Lịch sử tìm kiếm
-                                </h3>
-                                <ul class="header__search-history-list">
-                                    <li class="header__search-history-item">
-                                        <a href="">Tulip trắng</a>
-                                    </li>
-                                    <li class="header__search-history-item">
-                                        <a href="">Tulip hồng</a>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
-                        <div class="header__search-selection">
-                            <span class="header__search-selection-label">
-                                Trong shop
+
+                        <div class="home-filter__page">
+                            <span class="home-filter__page-num">
+                                <span class="home-filter__page-current">1</span>/14
                             </span>
-                            <i class="header__search-selection-icon fa-solid fa-angle-down"></i>
-                        
-                            <ul class="header__search-option">
-                                <li class="header__search-option-item header__search-option-item--active">
-                                    <span>
-                                    Trong shop
-                                    </span>
-                                    <i class="fas fa-check"></i>
-                                </li>
-                                <li class="header__search-option-item">
-                                    <span>
-                                    Ngoài shop
-                                    </span>
-                                    <i class="fas fa-check"></i>
-                                </li>
-                            </ul>
+                            <div class="home-filter__page-control">
+                                <a href="" class="home-filter__page-btn home-filter__page-btn--disabled">
+                                    <i class="home-filter__page-icon fas fa-angle-left"></i>
+                                </a>
+                                <a href="" class="home-filter__page-btn">
+                                    <i class="home-filter__page-icon fas fa-angle-right"></i>
+                                </a>
+
+                            </div>
                         </div>
-                        <button class="header__search-btn">
-                            <i class="header__search-btn-icon fas fa-search"></i>
-                        </button>
+
                     </div>
 
-                    <div class="header__cart">
-
-                        <div class="header__cart-wrap">
-                            <i class="fa-solid fa-cart-arrow-down header__cart-icon"></i>
-                            <span class="header__cart-notice">3</span>
-                            <!-- No cart: header__cart-list--no-cart -->
-                            <div class="header__cart-list">
-                                <img src="./assets/img/no-cart.jpg" alt="" class="header__cart-no-cart-img">
-                                <span class="header__cart-list-no-cart-msg">
-                                    Chưa có sản phẩm
-                                </span>
-
-                                <h4 class="header__cart-heading">
-                                    Sản phẩm đã thêm
-                                </h4>
-                                <ul class="header__cart-list-item">
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/flowers/white-tulip.jpg" alt="" class="header__cart-item-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Tulip trắng</h5>
-                                                <div class="header__cart-item-wrap">
-                                                    <span class="header__cart-item-price">170.000 đ</span>
-                                                    <span class="header__cart-item-mutiply">x</span>
-                                                    <span class="header__cart-item-quantity">4</span>
-                                                </div>                                                
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-description">Phân loại: Cao</span>
-                                                <span class="header__cart-item-remove">Xoá</span>
-                                            </div>
+                    <!-- Home product -->
+                    <div class="home-product">
+                        <!-- Grid -> Row -> Column -->
+                        <div class="grid__row">
+                            <div class="grid__column-2-4">
+                                <!-- Product Item -->
+                                <div class="home-product-item">
+                                    <div class="home-product-item__img" style="background-image: url(https://tse1.mm.bing.net/th?id=OIP.1NRPb-IKImyMbILgKhuzhAHaFj&pid=Api&P=0);"></div>
+                                    <h4 class="home-product-item__name">Pink Tulip Flower Pictures Pink Tulip Flower Pictures Pink Tulip Flower Pictures</h4>
+                                    <div class="home-product-item__price">
+                                        <span class="home-product-item__price-old">170.000 đ</span>
+                                        <span class="home-product-item__price-new">165.000 đ</span>
+                                    </div>
+                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__liked">
+                                            <i class="home-product-item__like-icon-empty fa-sharp fa-regular fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fa-sharp fa-solid fa-heart"></i>
+                                        </span>
+                                        <div class="home-product-item__rating">
+                                            <i class="fa-sharp fa-regular fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
                                         </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/flowers/pink-tulip.jpg" alt="" class="header__cart-item-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Tulip hồng</h5>
-                                                <div class="header__cart-item-wrap">
-                                                    <span class="header__cart-item-price">145.000 đ</span>
-                                                    <span class="header__cart-item-mutiply">x</span>
-                                                    <span class="header__cart-item-quantity">8</span>
-                                                </div>                                                
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-description">Phân loại: Vừa</span>
-                                                <span class="header__cart-item-remove">Xoá</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="header__cart-item">
-                                        <img src="./assets/img/flowers/orange-tulip.jpg" alt="" class="header__cart-item-img">
-                                        <div class="header__cart-item-info">
-                                            <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Tulip cam</h5>
-                                                <div class="header__cart-item-wrap">
-                                                    <span class="header__cart-item-price">155.000 đ</span>
-                                                    <span class="header__cart-item-mutiply">x</span>
-                                                    <span class="header__cart-item-quantity">7</span>
-                                                </div>                                                
-                                            </div>
-                                            <div class="header__cart-item-body">
-                                                <span class="header__cart-item-description">Phân loại: Vừa</span>
-                                                <span class="header__cart-item-remove">Xoá</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        <span class="home-product-item__sold">17 đã bán</span>
+                                    </div>
+                                    <div class="home-product-item__origin">
+                                        <span class="home-product-item__origin-brand">Flower Box</span>
+                                        <span class="home-product-item__origin-name">Quận 1, TP-HCM</span>
+                                    </div>
+                                    <div class="home-product-item__favourite">
+                                        <i class="fas fa-check"></i>
+                                        Yêu thích
+                                    </div>
 
-                                <a href="#" class="header__cart-view-cart btn btn--primary">
-                                    Xem giỏ hàng
-                                </a>
+                                    <div class="home-product-item__sale-off">
+                                        <span class="home-product-item__sale-off-percent">
+                                            10%
+                                        </span>
+                                        <span class="home-product-item__sale-off-label">
+                                            GIẢM
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
-
-        <!-- Body -->
-        <div class="container">
-
+              </div>
         </div>
+      </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-
-        </footer>
+      <!-- Footer -->
+      <footer class="footer"></footer>
     </div>
 
     <!-- Modal layout -->
@@ -354,6 +567,5 @@
                 </div>
         </div>
     </div> -->
-
-</body>
+  </body>
 </html>
