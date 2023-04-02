@@ -101,6 +101,70 @@
                         <li class="header__navbar-item header__navbar-item--bold">Đăng nhập</li>
                     </ul>
                 </nav>
+
+                <div class="header-with-search">
+                    <div class="header__logo">
+                        <img src="./assets/img/tulip-logo.jpg" alt="Tulip logo" class="header__logo-img">
+                    </div>
+
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm ... ">
+                            <div class="header__search-history ">
+                                <h3 class="header__search-history-heading">
+                                    Lịch sử tìm kiếm
+                                </h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="">Tulip trắng</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">Tulip hồng</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__search-selection">
+                            <span class="header__search-selection-label">
+                                Trong shop
+                            </span>
+                            <i class="header__search-selection-icon fa-solid fa-angle-down"></i>
+                        
+                            <ul class="header__search-option">
+                                <li class="header__search-option-item header__search-option-item--active">
+                                    <span>
+                                    Trong shop
+                                    </span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                                <li class="header__search-option-item">
+                                    <span>
+                                    Ngoài shop
+                                    </span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="header__cart">
+
+                        <div class="header__cart-wrap">
+                            <i class="fa-solid fa-cart-arrow-down header__cart-icon"></i>
+                            <span class="header__cart-notice">3</span>
+                            <!-- No cart: header__cart-list--no-cart -->
+                            <div class="header__cart-list">
+                                <img src="./assets/img/no-cart.jpg" alt="" class="header__cart-no-cart-img">
+                                <span class="header__cart-list-no-cart-msg">
+                                    Chưa có sản phẩm
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -210,6 +274,8 @@
                 </div>
         </div>
     </div> -->
+
+
 
 </body>
 </html>
