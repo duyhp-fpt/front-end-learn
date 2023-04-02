@@ -85,7 +85,7 @@ grid__row {
 
 /* Button style */
 .btn {
-  min-width: 142px;
+  min-width: 124px;
   height: 32px;
   text-decoration: none;
   border: 1px solid var(--border-color);
