@@ -2,7 +2,7 @@
   --white-color: #fff;
   --black-color: #000;
   --text-color: #333;
-  --primary-color: #00d494e3;
+  --primary-color: #00d494;
   --border-color: #dbdbdb;
   --star-gold-color: #ffce3e;
 
@@ -159,6 +159,7 @@ html {
   justify-content: space-between;
   align-items: center;
   background-color: var(--white-color);
+  z-index: 1;
 }
 
 .select-filter:hover .select-filter__list{
@@ -188,10 +189,6 @@ html {
   display: none;
 }
 
-.select-filter__item {
- 
-}
-
 .select-filter__link {
   text-decoration: none;
   color: var(--text-color);
@@ -202,4 +199,43 @@ html {
 
 .select-filter__link:hover {
   color: var(--primary-color);
+}
+
+/* Pagination */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.pagination_item {
+  margin: 0 12px;
+}
+
+.pagination_item--active .pagination_item__link{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.pagination_item--active .pagination_item__link:hover {
+  opacity: 0.8;
+}
+
+.pagination_item__link {
+  --height: 30px;
+  display: block;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #939393;
+  min-width: 40px;
+  height: var(--height);
+  text-align: center;
+  line-height: var(--height);
+  border-radius: 2px;
+}
+
+.pagination_item__icon {
+
 }
