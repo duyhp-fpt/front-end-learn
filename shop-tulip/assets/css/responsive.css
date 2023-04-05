@@ -1,9 +1,5 @@
 /* Mobile & Tablet */
 @media (max-width: 1024px) {
-    :root{
-        --header-height: 100px;
-        --navbar-height: 0px;
-    }
 
     .hide-on-mobile-tablet {
         display: none;
@@ -39,6 +35,11 @@
 
 /* Tablet */
 @media (min-width: 740px) and (max-width:1023px) {
+    :root{
+        --header-height: 100px;
+        --navbar-height: 0px;
+    }
+
     .hide-on-tablet {
         display: none;
     }
@@ -65,6 +66,11 @@
 
 /* Mobile*/
 @media (max-width: 739px) {
+    :root{
+        --header-height: 80px;
+        --navbar-height: 0px;
+    }
+
     .hide-on-mobile {
         display: none;
     }
@@ -149,4 +155,16 @@
         padding: 0 16px;
     }
 
+    .footer__heading {
+        text-align: center;
+    }
+    
+    .footer__download,
+    .footer__list-item-link {
+        justify-content: center;
+    }
+
+    .footer__download-apps {
+        flex: unset;
+    }
 }
