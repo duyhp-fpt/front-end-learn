@@ -1,6 +1,59 @@
+.app {
+  overflow: hidden;
+}
+
 .header {
   height: var(--header-height);
   background-image: linear-gradient(0, #2df57077, var(--primary-color));
+}
+
+.header__sort-bar {
+  position: absolute;
+  list-style: none;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  height: var(--header-sort-bar-height);
+  background-color: var(--white-color);
+  margin: 0;
+  padding-left: 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  display: none;
+}
+
+.header__sort-item {
+  flex: 1;
+}
+
+.header__sort-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 60%;
+  border-left: 1px solid #e5e5e5;
+  /* Căng giữa cho border-left */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header__sort-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  display: block;
+  height: 100%;
+  line-height: var(--header-sort-bar-height);
+  text-align: center;
+  position: relative;
+}
+
+.header__sort-item--actice .header__sort-link {
+  color: var(--primary-color);
+}
+
+.header__sort-item:first-child .header__sort-link::before{
+  display: none;
 }
 
 .header__navbar {
@@ -483,6 +536,16 @@
   align-items: center;
 }
 
+.header__mobile-search {
+  padding: 0 12px;
+  display: none;
+}
+
+.header__mobile-search-icon {
+  font-size: 2.6rem;
+  color: var(--white-color);
+}
+
 .header__logo {
   width: 88.4px;
   height: 88.4px;
@@ -528,6 +591,7 @@
   border-style: solid;
   border-color: transparent transparent var(--white-color) transparent;
   cursor: pointer;
+  z-index: 1;
 }
 
 .header__cart-wrap {
@@ -535,6 +599,7 @@
   display: inline-block;
   padding: 0 8px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .header__cart-icon {
@@ -549,7 +614,7 @@
 .header__cart-list {
   position: absolute;
   top: calc(100% + 8px);
-  right: 3px;
+  right: 0;
   background-color: var(--white-color);
   width: 300px;
   border: 1px solid var(--primary-color);
@@ -558,7 +623,7 @@
   display: none;
   animation: fadeIn ease-in 0.3s;
   cursor: default;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header__cart-list--no-cart .header__cart-no-cart-img,
@@ -729,7 +794,7 @@
   width: calc(100% - 16px);
   background-color: var(--white-color);
   border-radius: 4px;
-  box-shadow: 0 1px 4px var(--primary-color);
+  box-shadow: 0 1px 2px var(--primary-color);
   display: none;
   z-index: 1;
 }
@@ -780,8 +845,9 @@
   padding-left: 0;
   list-style: none;
   /* vh: view port height */
-  height: 24vh;
+  max-height: 32vh;
   overflow-y: auto;
+  width: 100%;
 }
 
 .header__cart-item {
@@ -955,6 +1021,63 @@
   margin-top: 36px;
 }
 
+/* Mobile category */
+.mobile-catogory {
+  display: none;
+}
+
+.mobile-catogory__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.mobile-catogory__list::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-catogory__item:nth-of-type(3n) .mobile-catogory__link{
+  background-color: #ffce3e;
+}
+
+.mobile-catogory__item:nth-of-type(3n+1) .mobile-catogory__link{
+  background-color: #1da1f2;
+}
+
+.mobile-catogory__item:nth-of-type(3n+2) .mobile-catogory__link{
+  background-color: var(--primary-color);
+}
+
+.mobile-catogory__item {
+  flex-shrink: 0;
+  padding: 2px;
+}
+
+.mobile-catogory__link {
+  --line-height: 2rem;
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 1.2rem;
+  line-height: var(--line-height);
+  text-align: center;
+  width: 110px;
+  height: calc(var(--line-height) * 2);
+  display: none;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-weight: 300;
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 0 4px;
+
+}
+
 /* Home sort + filter */
 
 .home-filter {
@@ -968,6 +1091,7 @@
   display: flex;
   align-items: center;
   border-radius: 4px;
+  z-index: 1.5;
 }
 
 .home-filter__page {
@@ -1225,6 +1349,7 @@ i.home-product-item__like-icon-fill {
 
 .home-product__pagination {
   margin: 48px 0 32px 0;
+  padding-left: 0;
 }
 
 
