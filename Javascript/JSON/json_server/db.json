@@ -1,0 +1,14 @@
+{
+    "courses":[
+        {
+            "id": 1,
+            "name": "Lập Trình JavaScript Cơ Bản",
+            "description": "Sử dụng Postman làm việc với REST API"
+        },
+        {
+            "id": 2,
+            "name": "Lập Trình HTML/CSS Cơ Bản",
+            "description": "Sử dụng Postman làm việc với REST API"
+        }
+    ]
+}
