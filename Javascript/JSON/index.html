@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <!-- Promise -->
@@ -21,12 +21,41 @@
     </style> -->
 
     <!-- JSON Server -->
-    <!-- <ul id="print"></ul> -->
+    <div>
+        <h1>Danh sách khoá học</h1>
+        <ul id="list-item"></ul>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <h1>Create course</h1>
+            <div>
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Name">
+            </div>
+            <div>
+                <label>Description</label>
+                <input type="text" name="description" placeholder="Description">
+            </div>
+            <button class="btn" id="btn-create">Create</button>
+        </div>
+        <div class="col-6">
+            <h1>Update course</h1>
+            <div>
+                <label>ID course need update</label>
+                <input type="text" name="id-update" placeholder="ID update">
+            </div>
+            <div>
+                <label>New name</label>
+                <input type="text" name="new-name" placeholder="Name">
+            </div>
+            <div>
+                <label>New description</label>
+                <input type="text" name="new-description" placeholder="Description">
+            </div>
+            <button class="btn" id="btn-update">Update</button>
+        </div>
+    </div>
 
-
-
-
-    
     <script src="./main.js"></script>
 </body>
 </html>

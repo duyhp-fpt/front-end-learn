@@ -144,7 +144,6 @@
 //     commentBlock.innerHTML = html;
 //   });
 
-
 // Fetch
 
 // var postAPI = 'https://jsonplaceholder.typicode.com/posts';
@@ -170,24 +169,167 @@
 //     })
 
 // JSON Server
-// Fake API
 // var postsAPI = 'http://localhost:3000/courses';
+
 // fetch(postsAPI)
 //     .then((response)=>{
 //         return response.json();
 //     })
 //     .then((courses)=>{
 //         var htmls = courses.map((course)=>{
-//             return `<li>
+//             return `<li class='item'>
 //             <h1>${course.name}</h1>
-//             <p>${course.description}</p>
+//             <p class='item-paragraph'>${course.description}</p>
 //             </li>`
 //         })
 //         console.log(htmls);
 //         var html = htmls.join('');
-//         document.getElementById('print').innerHTML = html;
+//         document.getElementById('list-item').innerHTML = html;
 //     })
 //     .catch((error)=>{
 //         console.log(error);
 //     })
 
+// Fake API
+
+// Link API
+var postsAPI = "http://localhost:3000/courses";
+
+function start() {
+  // Get list course
+  // getCourses((courses)=>{
+  //     console.log(courses);
+  //     renderCourse(courses);
+  // });
+  getCourses(renderCourse);
+  handleCreateForm();
+  handleUpdateCourse();
+}
+// start web
+start();
+
+function getCourses(callback) {
+  fetch(postsAPI)
+    .then((response) => {
+      return response.json();
+    })
+    .then(callback)
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+function renderCourse(courses) {
+  var listCoursesBlock = document.querySelector("#list-item");
+  var htmls = courses.map((course) => {
+    return `<li class='item course-item-${course.id}'>
+                <div class = "row">
+                    <div>
+                        <div class="row">
+                        <h1>ID: ${course.id} - </h1>
+                        <h1> ${course.name}</h1>
+                    </div>
+                    <p class='item-paragraph'>${course.description}</p>
+                    </div>
+                <button class="btn btn-delete" onclick=handleDeleteCourse(${course.id})>Xoá</button>
+                </div>
+            </li>`;
+  });
+  var html = htmls.join("");
+  listCoursesBlock.innerHTML = html;
+}
+
+function handleCreateForm() {
+  var createBtn = document.querySelector("#btn-create");
+
+  createBtn.onclick = () => {
+    var name = document.querySelector('input[name="name"]').value;
+    var description = document.querySelector('input[name="description"]').value;
+
+    var formData = {
+      name: name,
+      description: description,
+    };
+    createCourse(formData, () => {
+      getCourses(renderCourse);
+    });
+  };
+}
+
+function createCourse(data, callback) {
+  var options = {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  fetch(postsAPI, options)
+    .then((response) => {
+      response.json();
+    })
+    .then(callback)
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+function handleDeleteCourse(idCourse) {
+  var options = {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  fetch(postsAPI + "/" + idCourse, options)
+    .then((response) => {
+      response.json();
+    })
+    .then(() => {
+      var courseItem = document.querySelector(".course-item-" + idCourse);
+      if (courseItem) {
+        courseItem.remove();
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+function handleUpdateCourse() {
+  var updateBtn = document.querySelector("#btn-update");
+  updateBtn.onclick = () => {
+    var id = document.querySelector('input[name="id-update"]').value;
+    var name = document.querySelector('input[name="new-name"]').value;
+    var description = document.querySelector(
+      'input[name="new-description"]'
+    ).value;
+    console.log(id, name, description);
+
+    var formData = {
+      name: name,
+      description: description,
+    };
+    updateCourse(id, formData, () => {
+      getCourses(renderCourse);
+    });
+  };
+}
+
+function updateCourse(id, dataUpdate) {
+  var options = {
+    method: "PUT",
+    body: JSON.stringify(dataUpdate),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+  fetch(postsAPI + "/" + id, options)
+    .then((response) => {
+      response.json();
+    })
+    .then(callback)
+    .catch((error) => {
+      console.log(error);
+    });
+}
