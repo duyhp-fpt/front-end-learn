@@ -63,60 +63,11 @@ const app = {
         "https://yt3.googleusercontent.com/ytc/AL5GRJVxHN42gNBrveiYsSsJtfsoF6z3aQW46CqO5exc=s176-c-k-c0x00ffffff-no-rj",
     },
     {
-      name: "We Don't Talk Anymore",
-      singer: "Charlie Puth ft. Selena Gomez (BOXINBOX & Lionsize Remix)",
-      path: "./song/Charlie_Puth_-_We_Dont_Talk_Anymor_(getmp3.pro).mp3",
-      image:
-        "https://yt3.googleusercontent.com/ZoViy6jSW8lGsT7Fgz7PsxsWznVseOVjGNkqh9U34cJ-7eXAGs_f2s0yCWwgxsxZT6d7icafVr8=s176-c-k-c0x00ffffff-no-rj",
-    },
-    {
-      name: "What Lovers Do",
-      singer: "Maroon 5",
-      path: "./song/What_Lovers_Do_-_Maroon_5_Elemer_(getmp3.pro).mp3",
-      image:
-        "https://yt3.googleusercontent.com/ytc/AL5GRJVRgID2tISROKH6zguaqhid7-Gc9621FayTmabJNQ=s176-c-k-c0x00ffffff-no-rj",
-    },
-    {
-      name: "We Don't Talk Anymore",
-      singer: "Charlie Puth ft. Selena Gomez (BOXINBOX & Lionsize Remix)",
-      path: "./song/Charlie_Puth_-_We_Dont_Talk_Anymor_(getmp3.pro).mp3",
-      image:
-        "https://yt3.googleusercontent.com/ZoViy6jSW8lGsT7Fgz7PsxsWznVseOVjGNkqh9U34cJ-7eXAGs_f2s0yCWwgxsxZT6d7icafVr8=s176-c-k-c0x00ffffff-no-rj",
-    },
-    {
-      name: "What Lovers Do",
-      singer: "Maroon 5",
-      path: "./song/What_Lovers_Do_-_Maroon_5_Elemer_(getmp3.pro).mp3",
-      image:
-        "https://yt3.googleusercontent.com/ytc/AL5GRJVRgID2tISROKH6zguaqhid7-Gc9621FayTmabJNQ=s176-c-k-c0x00ffffff-no-rj",
-    },
-    {
-      name: "We Don't Talk Anymore",
-      singer: "Charlie Puth ft. Selena Gomez (BOXINBOX & Lionsize Remix)",
-      path: "./song/Charlie_Puth_-_We_Dont_Talk_Anymor_(getmp3.pro).mp3",
-      image:
-        "https://yt3.googleusercontent.com/ZoViy6jSW8lGsT7Fgz7PsxsWznVseOVjGNkqh9U34cJ-7eXAGs_f2s0yCWwgxsxZT6d7icafVr8=s176-c-k-c0x00ffffff-no-rj",
-    },
-    {
-      name: "EZ_Papa",
-      singer: "JustaTee",
-      path: "./song/EZ_Papa_-_JustaTee_Official_Music_(getmp3.pro).mp3",
-      image:
-        "https://yt3.googleusercontent.com/ytc/AL5GRJVxHN42gNBrveiYsSsJtfsoF6z3aQW46CqO5exc=s176-c-k-c0x00ffffff-no-rj",
-    },
-    {
       name: "Damn",
       singer: "Raftaar x kr$na",
       path: "https://mp3.filmisongs.com/go.php?id=Damn%20Song%20Raftaar%20Ft%20KrSNa.mp3",
       image:
         "https://a10.gaanacdn.com/gn_img/albums/YoEWlabzXB/oEWlj5gYKz/size_xxl_1586752323.webp",
-    },
-    {
-      name: "EZ_Papa",
-      singer: "JustaTee",
-      path: "./song/EZ_Papa_-_JustaTee_Official_Music_(getmp3.pro).mp3",
-      image:
-        "https://yt3.googleusercontent.com/ytc/AL5GRJVxHN42gNBrveiYsSsJtfsoF6z3aQW46CqO5exc=s176-c-k-c0x00ffffff-no-rj",
     },
   ],
   setConfig: function (key, value) {

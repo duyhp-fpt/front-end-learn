@@ -43,7 +43,8 @@
     top: 0;
     width: 100%;
     max-width: 480px;
-    border-bottom: 1px solid #ebebeb;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px var(--primary-color);
   }
   
   /* HEADER */
@@ -132,7 +133,7 @@
   /* PLAYLIST */
   .playlist {
     margin-top: 408px;
-    padding: 12px;
+    padding: 12px;    
   }
   
   .song {
