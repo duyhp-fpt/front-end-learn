@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./form.css" />
+    <title>Form Validation I</title>
+  </head>
+  <body>
+    <div class="main">
+      <form action="" method="POST" class="form" id="form-1">
+        <h3 class="heading">Thành viên đăng ký</h3>
+        <p class="desc">Chúng ta là một gia đình - Developer❤️</p>
+
+        <div class="spacer"></div>
+
+        <div class="form-group">
+          <label for="fullname" class="form-label">Tên đầy đủ</label>
+          <input
+            id="fullname"
+            name="fullname"
+            type="text"
+            placeholder="VD: Huỳnh Duy"
+            class="form-control"
+          />
+          <span class="form-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="text"
+            placeholder="VD: email@domain.com"
+            class="form-control"
+          />
+          <span class="form-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Mật khẩu</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Nhập mật khẩu"
+            class="form-control"
+          />
+          <span class="form-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password_confirmation" class="form-label"
+            >Nhập lại mật khẩu</label
+          >
+          <input
+            id="password_confirmation"
+            name="password_confirmation"
+            placeholder="Nhập lại mật khẩu"
+            type="password"
+            class="form-control"
+          />
+          <span class="form-message"></span>
+        </div>
+
+        <div class="form-group gender">
+          <label for="gender" class="form-label">Giới tính</label>
+          <div class="gender-option">
+            <div class="gender-item">
+              <input
+                name="gender"
+                type="radio"
+                class="form-control"
+                value="male"
+              />
+              <span>Nam</span>
+            </div>
+            <div class="gender-item">
+              <input
+                name="gender"
+                type="radio"
+                class="form-control"
+                value="female"
+              />
+              <span>Nữ</span>
+            </div>
+            <div class="gender-item">
+              <input
+                name="gender"
+                type="radio"
+                class="form-control"
+                value="other"
+              />
+              <span>Khác</span>
+            </div>
+          </div>
+          <span class="form-message"></span>
+        </div>
+
+        <button class="form-submit">Đăng ký</button>
+      </form>
+
+      <script src="./form.js"></script>
+
+      <script>
+        // Mong muốn đạt được
+        Validator({
+          form: "#form-1",
+          formGroupSelector: ".form-group",
+          errorSelector: ".form-message",
+          rules: [
+            Validator.isRequired("#fullname", "Vui lòng nhập tên đầy đủ"),
+            Validator.isRequired("input[name='gender']"),
+            Validator.isEmail("#email", "Vui lòng nhập Email"),
+            Validator.isRequired("#password", "Vui lòng nhập mật khẩu"),
+            Validator.minLength("#password", 6),
+            Validator.isConfirm(
+              "#password_confirmation",
+              () => {
+                return document.querySelector("#form-1 #password").value;
+              },
+              "Mật khẩu nhập lại không chính xác"
+            ),
+          ],
+          onSubmit: (data) => {
+            // Call API
+            console.log(data);
+          },
+        });
+      </script>
+    </div>
+  </body>
+</html>
