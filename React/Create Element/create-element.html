@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+    <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script> 
+    </head>
+<body>
+
+    <!--
+        1. React.createElement()
+        2. So sánh document.createElement() -> DOM Element
+        3. Thay đổi: id, class, style, ...
+        4. Thêm text, HTML
+        5. Tạo <h1 title="Hello" class="heading">Hello React</h1>
+        6. Tạo <ul>
+                    <li>ReactJS</li>
+                    <li>AngularJS</li>
+            </ul>
+    -->
+
+    <div id="root"></div>
+    <div id="root2"></div>
+    <div id="root3"></div>
+    
+</body>
+</html>
+
+<script>
+    // DOM
+
+    // const h1DOM = document.createElement('h1')
+    // h1DOM.title = 'Hello'
+    // h1DOM.className = 'heading'
+    // h1DOM.innerText = 'Hello ReactJS' 
+    // document.body.appendChild(h1DOM)
+
+    // const ulDOM = document.createElement('ul')
+    // const liDOM = document.createElement('li')
+    // liDOM.innerText = 'JavaScript'
+    // ulDOM.appendChild(liDOM)
+    // document.body.appendChild(ulDOM)
+
+    // React
+
+    const h1React = React.createElement('h1',{
+        title: 'Hello',
+        className: 'heading',
+    }, 'Hello React')
+
+    const ulReact = React.createElement(
+        'ul',
+        null,
+        React.createElement("li",null,"JavaScript"),
+        React.createElement("li",null,"ReactJS")
+        )
+
+    const divReact = React.createElement(
+        'div',
+        {
+            className: 'post-item',
+        },
+        React.createElement(
+            'h2',
+            {
+                title: 'Học React tại F8'
+            },
+            'Học ReactJS'
+        ),
+        React.createElement(
+            'p',
+            {},
+            'Học ReactJS từ cơ bản tới nâng cao'
+        )
+    )
+
+    // Get root element
+    const root = document.getElementById('root')
+
+    // React-DOM --> Render UI
+    ReactDOM.render(divReact, root)
+    ReactDOM.render(h1React, root2)
+    ReactDOM.render(ulReact, root3)
+    
+
+</script>
