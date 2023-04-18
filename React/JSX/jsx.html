@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSX</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
+<script type="text/babel">
+  const courses = [
+    {
+      name: "HTML, CSS",
+    },
+    {
+      name: "Responsive",
+    },
+    {
+      name: "ReactJS",
+    },
+  ];
+
+  const jsx = (
+    <ul>
+      {courses.map((course, index) =>
+        <li key={index} > {course.name} </li>
+        // React.createElement("li", null, course.name)
+      )}
+    </ul>
+  );
+  console.log(jsx);
+  ReactDOM.render(jsx, document.getElementById("root"));
+</script>

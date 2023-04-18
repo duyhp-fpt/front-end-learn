@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"
+    ></script>
+    <title>React Element Types</title>
+  </head>
+  <style>
+    img {
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      //   function Header() {
+      //     return <div className="header">Header</div>;
+      //   }
+      //   class Content extends React.Component {
+      //     render() {
+      //         return (<div className="header">Content</div>)
+      //     }
+      //   }
+      //   function Footer() {
+      //     return <div className="header">Footer</div>;
+      //   }
+      //   //   <Header/>
+      //   const app = (
+      //     <div className="wrapper">
+      //       <Header></Header>
+      //       <Content></Content>
+      //       <Footer></Footer>
+      //     </div>
+      //   );
+
+      //   ReactDOM.render(app, document.getElementById("app"));
+      function PostItem() {
+        return (
+            <div className="post-item">
+              <img
+                src="http://i3.ytimg.com/vi/1EBe-l1E3pM/maxresdefault.jpg"
+                alt="React webpack"
+              ></img>
+              <h2 className="post-title">Tạo dự án với React + Webpack</h2>
+              <p className="post-desc">
+                Bài kế tiếp chúng ta sẽ học cách sử dụng công cụ
+                "create-react-app" để tạo dự án làm việc với ReactJS. Tuy nhiên
+                khi dùng "create-react-app" chúng ta chỉ cần chạy 1 command-line
+                là xong, đôi khi điều này quá dễ dàng làm chúng ta không hiểu dự
+                án đó được xây dựng như thế nào. Video này mình sẽ hướng dẫn
+                cách bạn cách sử dụng Webpack để tạo một dự án làm việc với
+                ReactJS. Video này rất phù hợp với các bạn muốn đào sâu hiểu bản
+                chất của những thứ mình làm
+              </p>
+              <p className="post-published">Một ngày trước</p>
+          </div>
+        )
+      }
+
+      function PostList() {
+        return (
+          <div className="post-list">
+            <PostItem/>
+            <PostItem/>
+          </div>
+        )
+      }
+
+      const app = (
+      <PostList></PostList>
+      )
+      ReactDOM.render(app, document.getElementById("app"));
+    </script>
+  </body>
+</html>
