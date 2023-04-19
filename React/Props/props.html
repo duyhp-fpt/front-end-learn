@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"
+    ></script>
+    <title>Props</title>
+  </head>
+  <style>
+    img {
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div id="app"></div>
+    
+  </body>
+</html>
+
+
+<script type="text/babel">
+  //   function PostItem(props) {
+  //     console.log(props);
+  //     return (
+  //       <div className="post-item">
+  //         <img src={props.img} alt={props.title}></img>
+  //         <h2 className="post-title">{props.title}</h2>
+  //         <p className="post-desc">{props.desc}</p>
+  //         <p className="post-published">{props.published}</p>
+  //       </div>
+  //     );
+  //   }
+
+  //   function PostList() {
+  //     return (
+  //       <div className="post-list">
+  //         <PostItem
+  //           img="http://i3.ytimg.com/vi/1EBe-l1E3pM/maxresdefault.jpg"
+  //           title="1.Tạo dự án với React + Webpack"
+  //           desc='Bài kế tiếp chúng ta sẽ học cách sử dụng công cụ "create-react-app" để tạo dự án làm việc với ReactJS. Tuy nhiên khi dùng "create-react-app" chúng ta chỉ cần chạy 1 command-line là xong, đôi khi điều này quá dễ dàng làm chúng ta không hiểu dự án đó được xây dựng như thế nào. Video này mình sẽ hướng dẫn cách bạn cách sử dụng Webpack để tạo một dự án làm việc với ReactJS. Video này rất phù hợp với các bạn muốn đào sâu hiểu bản chất của những thứ mình làm'
+  //           published="Một ngày trước"
+  //         />
+  //         <PostItem
+  //           img="http://i3.ytimg.com/vi/1EBe-l1E3pM/maxresdefault.jpg"
+  //           title="2.Tạo dự án với React + Webpack"
+  //           post-desc='Bài kế tiếp chúng ta sẽ học cách sử dụng công cụ "create-react-app" để tạo dự án làm việc với ReactJS. Tuy nhiên khi dùng "create-react-app" chúng ta chỉ cần chạy 1 command-line là xong, đôi khi điều này quá dễ dàng làm chúng ta không hiểu dự án đó được xây dựng như thế nào. Video này mình sẽ hướng dẫn cách bạn cách sử dụng Webpack để tạo một dự án làm việc với ReactJS. Video này rất phù hợp với các bạn muốn đào sâu hiểu bản chất của những thứ mình làm'
+  //           post-published="Một ngày trước"
+  //         />
+  //       </div>
+  //     );
+  //   }
+
+  //   const app = <PostList />;
+
+  const courses = [
+    {
+      id: 15,
+      title: "HTML CSS Pro",
+      slug: "htmlcss",
+      description:
+        "Từ cơ bản tới chuyên sâu, thực hành 8 dự án, hàng trăm bài tập, trang hỏi đáp riêng, cấp chứng chỉ sau khóa học và mua một lần học mãi mãi.",
+      image: "courses/15/62f13d2424a47.png",
+      icon: "courses/15/62385d6c63dfa.png",
+      video_type: "upload",
+      video: null,
+      old_price: 2499000,
+      price: 1299000,
+      pre_order_price: 699000,
+      students_count: 2208,
+      is_pro: true,
+      is_coming_soon: false,
+      is_selling: true,
+      published_at: "2022-08-18T17:00:00.000000Z",
+      is_registered: false,
+      user_progress: 0,
+      last_completed_at: null,
+      image_url:
+        "https://files.fullstack.edu.vn/f8-prod/courses/15/62f13d2424a47.png",
+      icon_url:
+        "https://files.fullstack.edu.vn/f8-prod/courses/15/62385d6c63dfa.png",
+      video_url: "",
+      landing_page_url: "/landing/htmlcss",
+      is_pre_order: false,
+      is_published: true,
+    },
+    {
+      id: 19,
+      title: "JavaScript Pro",
+      slug: "javascript-pro",
+      description: "Khóa học JavaScript Pro",
+      image: "courses/19/62f13cb607b4b.png",
+      icon: "courses/19/62f13cb685c81.png",
+      video_type: "upload",
+      video: null,
+      old_price: 0,
+      price: 0,
+      pre_order_price: 0,
+      students_count: 0,
+      is_pro: true,
+      is_coming_soon: true,
+      is_selling: false,
+      published_at: "2023-04-30T17:00:00.000000Z",
+      is_registered: false,
+      user_progress: 0,
+      last_completed_at: null,
+      image_url:
+        "https://files.fullstack.edu.vn/f8-prod/courses/19/62f13cb607b4b.png",
+      icon_url:
+        "https://files.fullstack.edu.vn/f8-prod/courses/19/62f13cb685c81.png",
+      video_url: "",
+      landing_page_url: "/landing/javascript-pro",
+      is_pre_order: false,
+      is_published: false,
+    },
+    {
+      id: 20,
+      title: "ReactJS Pro",
+      slug: "reactjs-pro",
+      description: "Khóa học ReactJS Pro",
+      image: "courses/20/62f13dded314e.png",
+      icon: "courses/20/62f13ddf5e7f9.png",
+      video_type: "upload",
+      video: null,
+      old_price: 0,
+      price: 0,
+      pre_order_price: 0,
+      students_count: 0,
+      is_pro: true,
+      is_coming_soon: true,
+      is_selling: false,
+      published_at: "2023-07-31T17:00:00.000000Z",
+      is_registered: false,
+      user_progress: 0,
+      last_completed_at: null,
+      image_url:
+        "https://files.fullstack.edu.vn/f8-prod/courses/20/62f13dded314e.png",
+      icon_url:
+        "https://files.fullstack.edu.vn/f8-prod/courses/20/62f13ddf5e7f9.png",
+      video_url: "",
+      landing_page_url: "/landing/reactjs-pro",
+      is_pre_order: false,
+      is_published: false,
+    },
+  ];
+
+  function CourseItem({ data }) {
+    return (
+      <div>
+        <h2 onClick={() => alert(`${data.title}`)}>{data.title}</h2>
+        <p>{data.description}</p>
+        <p>{data.students_count}</p>
+        <img src={data.image_url} alt={data.title} />
+      </div>
+    );
+  }
+
+  function App() {
+    return (
+      <div id="wrapper">
+        {courses.map((course, index) => (
+          <CourseItem key={index} data={course} />
+        ))}
+      </div>
+    );
+  }
+
+  ReactDOM.render(<App />, document.getElementById("app"));
+</script>
